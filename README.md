@@ -1,12 +1,4 @@
-*   *                                
-*   *                                
-*   *                                
-*   *   ****   * **   ****    ****   
-*   *  *    *   *    *    *  *    *  
-*   *  *        *    *    *  *    *  
-*   *  *        *    *    *  *    *  
-*   *  *    *   *    *    *  *    *  
- ***    ****    *     ****    ****
+# Ucroo
 
 Welcome to the front end development practical for Ucroo
 
