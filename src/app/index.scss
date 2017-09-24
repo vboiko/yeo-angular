@@ -60,13 +60,14 @@ md-toolbar.md-default-theme {
   background-color: black;
 }
 
-section.jumbotron {
-  margin-bottom: 30px;
-  padding: 1px 30px;
-  background-color: #5aadbb;
+section.hero {
   text-align: center;
-
   color: white;
+  background: url(https://scontent-vie1-1.xx.fbcdn.net/v/t31.0-8/18921215_1056188571148081_4447993956043719928_o.jpg?oh=c4f9a2e9540ccda8db84ac6441c26f2a&oe=5A4BB4D0);
+  background-size: cover;
+  // viewport height excluding nav and footer heights
+  height: calc(100vh - 48px - 64px);
+  width: 100%;
 
   h1 {
     font-size: 3em;
@@ -86,6 +87,18 @@ section.jumbotron {
     }
   }
 }
+
+// flex helpers
+.flex {
+  display: flex;
+}
+
+.flex-items-center {
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject

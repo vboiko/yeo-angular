@@ -19,11 +19,25 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController($location, Configuration) {
+    function NavbarController($location, Configuration, $mdDialog, $document) {
       var vm = this;
-      vm.navItems = Configuration.getNavItems();
       vm.currentActiveLink = $location.path().replace(/\//g, '') ? $location.path().replace(/\//g, '') : 'home'
+
+      // accessing data from configuration service
+      vm.navItems = Configuration.getNavItems();
       vm.companyName = Configuration.getCompanyName()
+      vm.applicationVersion =Configuration.getVersion()
+      vm.applicationName = Configuration.getApplicationName()
+
+      // about dialog
+      vm.showAboutDialog = function(e) {
+        $mdDialog.show({
+          contentElement: '#aboutDialog',
+          parent: angular.element($document.body),
+          targetEvent: e,
+          clickOutsideToClose:true
+        })
+      }
     }
   }
 

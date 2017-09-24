@@ -3,7 +3,7 @@
   md-selected-nav-item="vm.currentActiveLink"
 >
   <section flex layout="row" layout-align="left center">
-    <md-button>{{ vm.companyName }}</md-button>
+    <md-button ng-click="vm.showAboutDialog($event)">{{ vm.companyName }}</md-button>
     <md-nav-item
       ng-repeat="navItem in vm.navItems"
       md-nav-href="/{{navItem.label}}"
@@ -13,3 +13,13 @@
     </md-nav-item>
   </section>
 </md-nav-bar>
+
+<div style="visibility: hidden">
+  <div class="md-dialog-container" id="aboutDialog">
+    <md-dialog layout-padding>
+      <h3>{{ vm.applicationName }} for <i>{{ vm.companyName }}</i></h3>
+      <p>Current version is {{vm.applicationVersion}}</p>
+    </md-dialog>
+  </div>
+</div>
+
