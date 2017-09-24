@@ -11,7 +11,8 @@
       getApplicationName: getApplicationName,
       getVersion: getVersion,
       getCompanyName: getCompanyName,
-      getCopyrightDate: getCopyrightDate
+      getCopyrightDate: getCopyrightDate,
+      getNavItems: getNavItems,
     };
 
     return service;
@@ -30,7 +31,24 @@
 
     function getCopyrightDate() {
       // may want to return a date object to be i18n or l12n
-      return "2017";
+      return new Date().getFullYear()
+    }
+
+    function getNavItems() {
+      return [
+        {
+          label: "home",
+          action: "navigate:home",
+        },
+        {
+          label: "contact",
+          action: "show:contactForm",
+        },
+        {
+          label: "about",
+          action: "show:aboutDialog",
+        }
+      ]
     }
 
   }

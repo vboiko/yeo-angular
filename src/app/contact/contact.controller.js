@@ -3,9 +3,9 @@
 
   angular
     .module('workspace')
-    .controller('MainController', MainController);
+    .controller('ContactController', ContactController);
 
   /** @ngInject */
-  function MainController() {
+  function ContactController() {
   }
 })();

@@ -3,9 +3,9 @@
 
   angular
     .module('workspace')
-    .controller('MainController', MainController);
+    .controller('AboutController', AboutController);
 
   /** @ngInject */
-  function MainController() {
+  function AboutController() {
   }
 })();
