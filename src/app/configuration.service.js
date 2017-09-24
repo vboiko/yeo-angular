@@ -12,7 +12,7 @@
       getVersion: getVersion,
       getCompanyName: getCompanyName,
       getCopyrightDate: getCopyrightDate,
-      getNavItems: getNavItems,
+      getNavItems: getNavItems
     };
 
     return service;
@@ -38,15 +38,15 @@
       return [
         {
           label: "home",
-          action: "navigate:home",
+          action: "navigate:home"
         },
         {
           label: "contact",
-          action: "show:contactForm",
+          action: "show:contactForm"
         },
         {
           label: "about",
-          action: "show:aboutDialog",
+          action: "show:aboutDialog"
         }
       ]
     }

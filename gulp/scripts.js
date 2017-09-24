@@ -3,6 +3,8 @@
 var path = require('path');
 var gulp = require('gulp');
 var conf = require('./conf');
+var gutil = require('gulp-util');
+var fs = require('fs');
 
 var browserSync = require('browser-sync');
 
@@ -24,3 +26,8 @@ function buildScripts() {
     .pipe($.eslint.format())
     .pipe($.size())
 };
+
+gulp.task('print:package.json', function() {
+  var json = fs.readFileSync('package.json', 'utf8');
+  gutil.log(gutil.colors.yellow(json))
+})

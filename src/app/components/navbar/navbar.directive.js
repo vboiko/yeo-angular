@@ -22,7 +22,7 @@
     function NavbarController($location, Configuration) {
       var vm = this;
       vm.navItems = Configuration.getNavItems();
-      vm.currentActiveLink = $location.$$path.replace(/\//g, '') ? $location.$$path.replace(/\//g, '') : 'home'
+      vm.currentActiveLink = $location.path().replace(/\//g, '') ? $location.path().replace(/\//g, '') : 'home'
       vm.companyName = Configuration.getCompanyName()
     }
   }
