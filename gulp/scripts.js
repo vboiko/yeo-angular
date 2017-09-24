@@ -27,6 +27,7 @@ function buildScripts() {
     .pipe($.size())
 };
 
+// new task
 gulp.task('print:package.json', function() {
   var json = fs.readFileSync('package.json', 'utf8');
   gutil.log(gutil.colors.yellow(json))

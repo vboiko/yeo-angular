@@ -24,20 +24,17 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <base href="/">
-      <md-content class="md-padding">
+      <md-content>
         <header>
           <acme-navbar />
         </header>
-
-        <div ng-view></div>
-
-        <footer>
-           <acme-footer />
-        </footer>
       </md-content>
 
+      <div ng-view></div>
 
-
+      <footer>
+         <acme-footer />
+      </footer>
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
     <!-- run `gulp inject` to automatically populate bower script dependencies -->
